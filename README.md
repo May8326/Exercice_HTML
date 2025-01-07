@@ -2,7 +2,7 @@
 
 **Date de rendu :** vendredi 20 janvier 2025 (23h59)
 
-**Consigne** A partir du texte et des images fournies, structurer en HTML et CSS une page web identique et répondant aux mêmes caractéristiques indiquées. 
+**Consigne** : A partir du texte et des images fournies, structurer en HTML et CSS une page web identique et répondant aux mêmes caractéristiques indiquées. 
 Vous commenterez également votre code en explicitant votre démarche et vos difficultés éventuelles.
 Comme toujours, pas de réponse unique, mais le code doit être valide.
 
