@@ -1,0 +1,149 @@
+<!-- Remarque générale : Excellent devoir ! Malgré quelques maladresses dans la structure HTML (voir mes remarques dans le code, mais notamment l'usage de la <span> comme élément de block, ce qui n'est pas valide), les notions vues en cours semblent bien acquises tant dans le HTML que le CSS -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Grace Hopper</title>
+</head>
+
+<body>
+	<!-- En-tête -->
+	<header>
+		<h1>Grace Hopper</h1>
+		<nav>
+			<ul>
+				<li><a href="#resume">Résumé</a></li>
+				<li><a href="#biographie">Biographie</a></li>
+				<li><a href="#distinctions">Distinctions</a></li>
+				<li><a href="#hommages">Hommages</a></li>
+				<li><a href="#anecdote">Anecdote</a></li>
+				<li><a href="#notes">Notes et références</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<!-- Conteneur pour l'infobox et le texte -->
+	<div class="container">
+		<!-- Infobox -->
+		<span class="infobox">
+			<!-- La span est un élément inline qui ne peut pas contenir de bloc : il aurait fallu mettre une <div> ou une <section>, et l'emploi de l'élément <figure> pour l'image et la légende (<figcaption>) -->
+			<span class="image">
+				<img src="images/Commodore_Grace_M._Hopper,_USN_(covered).jpg" alt="Grace Hopper en 1984"/>
+				<div class="legend">Grace Hopper en 1984.</div>
+			</span>
+			<table>
+				<tr>
+					<td>Nom de naissance</td>
+					<td>Grace Brewster Murray</td> 
+				</tr>
+				<tr>
+					<td>Surnom</td>
+					<td>Amazing Grace</td>
+				</tr>
+				<tr>
+					<td>Naissance</td>
+					<td>
+						<ul>
+							<li>9 décembre 1906</li>
+							<li><a href="https://fr.wikipedia.org/wiki/New_York">New York</a> (<a href="https://fr.wikipedia.org/wiki/%C3%89tats-Unis">États-Unis</a>)</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Décès</td>
+					<td>
+						<ul>
+							<li>1er janvier 1992 (à 85 ans)</li>
+							<li><a href="https://fr.wikipedia.org/wiki/Comt%C3%A9_d%27Arlington">Comté d'Arlington</a> (États-Unis)</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Sépulture</td>
+					<td>Cimetière national d'Arlington (7 janvier 1992)</td>
+				</tr>
+				<tr>
+					<td>Nationalité</td>
+					<td>Américaine <img src="images/Flag_of_the_United_States.svg" alt="Drapeau des États-Unis" width="6%" height="auto"/></td>
+				</tr>
+				<tr>
+					<td>Formation</td>
+					<td>
+						<!-- un rowspan ici aurait été plus adapté -->
+						<ul>
+							<li>Wardlaw-Hartridge School (en) (1923-1924)</li>
+							<li><a href="https://fr.wikipedia.org/wiki/Vassar_College">Vassar College</a> (licence (en)) (1924-1928)</li>
+							<li><a href="https://fr.wikipedia.org/wiki/Universit%C3%A9_Yale">Université Yale</a> (maîtrise (en)) (1928-1930)</li>
+							<li><a href="https://fr.wikipedia.org/wiki/Universit%C3%A9_Yale">Université Yale</a> (doctorat) (jusqu'en 1934)</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Activités</td>
+					<td>Mathématicienne, professeure d’université, programmeuse, informaticienne, officier de marine, physicienne</td>
+				</tr>
+				<tr>
+					<td>Période d'activité</td>
+					<td>À partir de 1943</td>
+				</tr>
+			</table>
+		</span>
+		
+		<!-- Contenu de la page -->
+		<span class="text">
+			<!-- idem ici : La span est un élément inline qui ne peut pas contenir de bloc : il aurait fallu mettre une <div> ou un <main> -->
+			<div id="resume">
+				<h2>Résumé</h2>
+				<p>Grace Murray Hopper est une informaticienne américaine et Rear admiral (lower half) de la marine américaine, née le 9 décembre 1906 à New York et morte le 1er janvier 1992 dans le comté d'Arlington. Elle est la conceptrice du premier compilateur en 1951 (A-0 System) et du langage Cobol en 1959.</p>
+			</div>
+			
+			<div id="biographie">
+				<h2>Biographie</h2>
+				<h3>Jeunesse</h3>
+				<p>Grace Brewster Murray est née le 9 décembre 1906 à New York. Elle commence à étudier les mathématiques, la physique et l'économie au Vassar College, et en sort diplômée d'un Bachelor of Art en mathématiques et physique en 1928. Elle enseigne au Vassar tout en obtenant son Master of Arts, en 1930, puis son doctorat, en 1934, en mathématiques à l'université Yale.</p>
+				<p>En 1930, elle épouse Vincent Foster Hopper, un professeur de littérature de l'université NYU. Le couple, qui n'a pas d'enfants, divorce en 1945.</p>
+				<h3>Carrière</h3>
+				<p>En 1943, Grace Hopper s'engage dans la marine américaine. Promue au grade de lieutenant, elle est affectée l'année suivante au Bureau of Ordnance Computation Project de l'université Harvard. Elle travaille dans l'équipe de Howard Aiken sur l'ordinateur Harvard Mark I. Elle fait partie du premier groupe, comptant trois personnes, apprenant à le programmer<sup><a href="#3">3</a></sup>.</p>
+				<p>À la fin de la Seconde Guerre mondiale, elle quitte le service actif de la marine, mais continue à travailler au développement des ordinateurs Harvard Mark II puis Harvard Mark III pour le compte du Computation Laboratory d'Harvard<sup><a href="#3">3</a></sup>.</p>
+				<p>En 1949, Grace Hopper est employée par la Eckert-Mauchly Computer Corporation (en) (EMCC) et rejoint l'équipe développant UNIVAC I à Philadelphie. En 1950, la compagnie est rachetée par Remington Rand. Hopper conçoit l'année suivante le premier compilateur pour UNIVAC I, nommé A-0 System. En 1955, elle invente le langage FLOW-MATIC aussi appelé B-0 (Business Language Version 0) pour l'UNIVAC I. À partir de 1957, elle travaille pour IBM, où elle défend l'idée qu'un programme devrait pouvoir être écrit dans un langage proche de l'anglais plutôt que d'être calqué sur le langage machine, comme l'assembleur. De cette idée naît le langage Cobol en 1959.</p>
+				<p>En 1966, conformément au règlement en vigueur, elle doit quitter la Navy après avoir atteint l'âge de 60 ans, mais est rappelée l'année suivante. Au cours des années 1970, elle mène les travaux d'établissement de normes pour les ordinateurs, en particulier les premiers langages de programmation évolués : Fortran et Cobol.</p>
+				<p>Grace Hopper reste dans la Marine jusqu'en 1986, date à laquelle elle prend sa retraite avec le grade de Rear admiral (lower half). Elle est alors l'officier le plus âgé de la marine américaine.</p>
+				<p>Jusqu'à son décès en 1992, elle est employée comme consultante externe par Digital Equipment, pour des conférences sur les débuts de l'informatique. Elle est enterrée avec les honneurs militaires au cimetière national d'Arlington.</p>
+			</div>
+			
+			<div id="distinctions">
+				<h2>Distinctions</h2>
+				<p>En 1986, Grace Hopper est décorée de la Defense Distinguished Service Medal, plus haute distinction existante pour les non-combattants. En 1991, elle reçoit la National Medal of Technology pour « ses contributions novatrices dans le développement de langages de programmation ». En 1983 elle est lauréate du prix Ada-Lovelace.</p>
+				<p>Le 22 novembre 2016, Barack Obama lui décerne à titre posthume la médaille présidentielle de la Liberté.</p>
+			</div>
+			
+			<div id="hommages">
+				<h2>Hommages</h2>
+					<p>En 1973, Grace Hopper est nommée « membre émérite » (distinguished fellow) de la British Computer Society. Elle est inscrite au National Women's Hall of Fame en 1994. Près d'une cinquantaine de doctorats honoraires lui ont été décernés. En 1997, un destroyer de la classe Arleigh Burke, est baptisé USS Hopper (DDG-70)<sup><a href="#3">3</a></sup>.</p>
+					<p>Une conférence technique internationale, organisée depuis 1994 par l'Institut Anita-Borg, est baptisée Grace Hopper Celebration of Women in Computing (en) en son honneur.</p>
+					<p>La toponymie mondiale lui rend aussi hommage. En France, le Laboratoire d'informatique de l'École polytechnique a baptisé une de ses salles en son honneur. Aux États-Unis, l'académie navale a baptisé son centre de cyberdéfense en son honnage11. Au Québec, une future rue de Montréal porte officiellement son nom depuis le 3 mars 201712 (cependant, la rue située au Technoparc de Saint-Laurent n'était toujours pas construite en date de février 2024). En France, la place Grace-Murray-Hopper (13e arrondissement de Paris), lui rend hommage13 dans le nouveau quartier de la station F. La promotion 2018-2021 de la MIAGE de Sophia-Antipolis est nommée en son honneur.</p>
+					<p>L'astéroïde (5773) Hopper porte également son nom.</p>
+					<p>En 2022, la société de calcul informatique Nvidia lui dédie sa dernière microarchitecture.</p>
+				</div>
+				
+				<div id="anecdote">
+					<h2>Anecdote</h2>
+						<p>La popularisation du terme bug est attribuée à Grace Hopper. En effet, bien que l'utilisation de ce terme soit attestée dès 1878, la présence d'un insecte (bug) dans l'ordinateur Mark II, sur lequel travaillait Hopper, a permis la consolidation définitive du terme pour désigner un problème informatique.</p>
+						<p>Néanmoins, comme le mentionne Hopper elle-même, elle n'était pas présente lorsque son équipe a découvert l'insecte dans l'ordinateur.</p>    
+				</div>
+				
+				<div id="notes">
+					<h2>Notes et références</h2>
+					<ol>
+						<!-- Il faut éviter de mettre en valeur d'attribut des chiffres uniques (sauf quand l'attribut fait référence à une dimension/taille) -->
+						<li id="1"><a href="http://www.computerhistory.org/collections/catalog/102702026">http://www.computerhistory.org/collections/catalog/102702026</a></li>
+						<li id="2"><a href="http://sirismm.si.edu/EADpdfs/NMAH.AC.0324.pdf">http://sirismm.si.edu/EADpdfs/NMAH.AC.0324.pdf</a></li>
+						<li id="3">Susan Ware (dir.), Stacy Braukman et al., Notable American</li>
+					</ol>
+				</div>
+			</span>
+		</div>
+	</body>
+	</html>
